@@ -1,0 +1,20 @@
+<div class="cart-items">
+    @if (Items.Count == 0)
+    {
+        <div>Cart is empty.</div>
+    }
+    else
+    {
+        <ul>
+            @foreach (var item in Items)
+            {
+                <li>@item.Name - $@item.Price.ToString("0.00")</li>
+            }
+        </ul>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public IReadOnlyList<Product> Items { get; set; } = Array.Empty<Product>();
+}

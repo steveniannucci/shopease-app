@@ -1,0 +1,42 @@
+﻿@page "/"
+
+<PageTitle>ShopEase</PageTitle>
+
+<h1>ShopEase</h1>
+
+<div class="row">
+	<div class="col-md-8">
+		<h2>Products</h2>
+		<div class="product-grid">
+			@foreach (var product in Products)
+			{
+				<ProductCard @key="product.ProductID" Product="product" OnAddToCart="HandleAddToCart" />
+			}
+		</div>
+	</div>
+	<div class="col-md-4">
+		<h2>Cart</h2>
+		<Cart Items="CartItems" />
+	</div>
+</div>
+
+@code {
+	private readonly List<Product> CartItems = new();
+
+	private readonly List<Product> Products = new()
+	{
+		new Product { ProductID = 1, Name = "Laptop", Price = 999.99f, Category = "Electronics" },
+		new Product { ProductID = 2, Name = "Headphones", Price = 149.50f, Category = "Electronics" },
+		new Product { ProductID = 3, Name = "Coffee Maker", Price = 79.99f, Category = "Home" }
+	};
+
+	private void HandleAddToCart(Product product)
+	{
+		if (product == null)
+		{
+			return;
+		}
+
+		CartItems.Add(product);
+	}
+}

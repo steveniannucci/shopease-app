@@ -1,0 +1,18 @@
+<div class="product-card">
+	<div class="product-name">@Product.Name</div>
+	<div class="product-price">$@Product.Price.ToString("0.00")</div>
+	<div class="product-category">@Product.Category</div>
+	<button class="btn btn-primary" @onclick="AddToCart">Add to Cart</button>
+</div>
+
+@code {
+	[Parameter]
+	[EditorRequired]
+	public Product Product { get; set; } = new();
+
+	[Parameter]
+	public EventCallback<Product> OnAddToCart { get; set; }
+
+	private Task AddToCart()
+		=> OnAddToCart.HasDelegate ? OnAddToCart.InvokeAsync(Product) : Task.CompletedTask;
+}
