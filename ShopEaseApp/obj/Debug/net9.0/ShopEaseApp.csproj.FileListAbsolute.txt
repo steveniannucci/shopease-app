@@ -1098,10 +1098,10 @@ C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Fron
 C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\obj\Debug\net9.0\refint\ShopEaseApp.dll
 C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\obj\Debug\net9.0\ShopEaseApp.pdb
 C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\obj\Debug\net9.0\ref\ShopEaseApp.dll
-C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\bin\Debug\net9.0\wwwroot\_framework\ShopEaseApp.p16fkdrgak.wasm
-C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\bin\Debug\net9.0\wwwroot\_framework\ShopEaseApp.tpktumqpf9.pdb
-C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\bin\Debug\net9.0\wwwroot\_framework\ShopEaseApp.p16fkdrgak.wasm.gz
-C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\bin\Debug\net9.0\wwwroot\_framework\ShopEaseApp.tpktumqpf9.pdb.gz
-C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\obj\Debug\net9.0\compressed\es9h93q1qi-p16fkdrgak.gz
-C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\obj\Debug\net9.0\compressed\www6mow7s7-tpktumqpf9.gz
-C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\obj\Debug\net9.0\compressed\i3ixt5o7dn-lhxcbqnsbz.gz
+C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\bin\Debug\net9.0\wwwroot\_framework\ShopEaseApp.60ba63kolu.wasm
+C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\bin\Debug\net9.0\wwwroot\_framework\ShopEaseApp.g67ym5nllt.pdb
+C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\bin\Debug\net9.0\wwwroot\_framework\ShopEaseApp.60ba63kolu.wasm.gz
+C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\bin\Debug\net9.0\wwwroot\_framework\ShopEaseApp.g67ym5nllt.pdb.gz
+C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\obj\Debug\net9.0\compressed\es9h93q1qi-60ba63kolu.gz
+C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\obj\Debug\net9.0\compressed\www6mow7s7-g67ym5nllt.gz
+C:\Users\Steven\OneDrive - University of Central Florida\Documents\Coursera\Front-End Development\Project\Course 6\shopease-app\ShopEaseApp\obj\Debug\net9.0\compressed\i3ixt5o7dn-s0eilgjdjm.gz
