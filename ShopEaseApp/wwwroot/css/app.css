@@ -2,6 +2,19 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem 0;
+}
+
+h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+}
+
 h1:focus {
     outline: none;
 }
@@ -22,6 +35,10 @@ a, .btn-link {
 
 .content {
     padding-top: 1.1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -111,4 +128,81 @@ code {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: #b6c2d2;
+}
+
+.product-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.3;
+}
+
+.product-price {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0f766e;
+}
+
+.product-category {
+    font-size: 0.85rem;
+    color: #4b5563;
+}
+
+.product-card .btn {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+.product-card .btn:focus-visible {
+    outline: 2px solid #0f766e;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .product-card {
+        padding: 0.875rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
