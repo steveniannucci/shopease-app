@@ -1,4 +1,7 @@
 ﻿@page "/"
+@using ShopEaseApp.Services
+@inject CartService CartService
+@implements IDisposable
 
 <PageTitle>ShopEase</PageTitle>
 
@@ -16,27 +19,49 @@
 	</div>
 	<div class="col-md-4">
 		<h2>Cart</h2>
-		<Cart Items="CartItems" />
+		<Cart Items="CartService.Items" Total="CartService.Total" OnRemove="HandleRemoveFromCart" OnClear="HandleClearCart" />
 	</div>
 </div>
 
 @code {
-	private readonly List<Product> CartItems = new();
-
 	private readonly List<Product> Products = new()
 	{
-		new Product { ProductID = 1, Name = "Laptop", Price = 999.99f, Category = "Electronics" },
-		new Product { ProductID = 2, Name = "Headphones", Price = 149.50f, Category = "Electronics" },
-		new Product { ProductID = 3, Name = "Coffee Maker", Price = 79.99f, Category = "Home" }
+		new Product { ProductID = 1, Name = "Laptop", Price = 999.99m, Category = "Electronics" },
+		new Product { ProductID = 2, Name = "Headphones", Price = 149.50m, Category = "Electronics" },
+		new Product { ProductID = 3, Name = "Coffee Maker", Price = 79.99m, Category = "Home" }
 	};
 
-	private void HandleAddToCart(Product product)
+	protected override void OnInitialized()
 	{
-		if (product == null)
+		CartService.OnChange += HandleCartChanged;
+	}
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (!firstRender)
 		{
 			return;
 		}
 
-		CartItems.Add(product);
+		await CartService.InitializeAsync();
+	}
+
+	private Task HandleAddToCart(Product product)
+		=> CartService.AddProductAsync(product);
+
+	private Task HandleRemoveFromCart(int productId)
+		=> CartService.RemoveProductAsync(productId);
+
+	private Task HandleClearCart()
+		=> CartService.ClearAsync();
+
+	private void HandleCartChanged()
+	{
+		InvokeAsync(StateHasChanged);
+	}
+
+	public void Dispose()
+	{
+		CartService.OnChange -= HandleCartChanged;
 	}
 }

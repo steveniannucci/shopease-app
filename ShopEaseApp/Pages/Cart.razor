@@ -1,20 +1,41 @@
 <div class="cart-items">
     @if (Items.Count == 0)
     {
-        <div>Cart is empty.</div>
+        <div>Cart is empty. Add items to get started.</div>
     }
     else
     {
         <ul>
             @foreach (var item in Items)
             {
-                <li>@item.Name - $@item.Price.ToString("0.00")</li>
+                <li>
+                    <span>@item.Name - $@item.Price.ToString("0.00")</span>
+                    <button class="btn btn-link" @onclick="() => OnRemove.InvokeAsync(item.ProductID)">Remove</button>
+                </li>
             }
         </ul>
+
+        <div class="cart-summary">
+            <strong>Total:</strong> $@Total.ToString("0.00")
+        </div>
+
+        <button class="btn btn-outline-secondary" @onclick="HandleClear">Clear Cart</button>
     }
 </div>
 
 @code {
     [Parameter]
     public IReadOnlyList<Product> Items { get; set; } = Array.Empty<Product>();
+
+    [Parameter]
+    public decimal Total { get; set; }
+
+    [Parameter]
+    public EventCallback<int> OnRemove { get; set; }
+
+    [Parameter]
+    public EventCallback OnClear { get; set; }
+
+    private Task HandleClear()
+        => OnClear.HasDelegate ? OnClear.InvokeAsync() : Task.CompletedTask;
 }

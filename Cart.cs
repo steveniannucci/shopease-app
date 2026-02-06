@@ -19,10 +19,6 @@ public class Cart
 		}
 
 		product.SanitizeFields();
-		if (!product.TryValidate(out _))
-		{
-			return;
-		}
 
 		_products.Add(product);
 		SaveProductToDatabase(product);
@@ -45,9 +41,9 @@ public class Cart
 		}
 	}
 
-	public decimal CalculateTotal()
+	public float CalculateTotal()
 	{
-		decimal total = 0m;
+		float total = 0f;
 
 		foreach (var product in _products)
 		{
